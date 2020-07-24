@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +8,56 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(45deg, red, blue)fixed;
+  background-repeat: unset;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+input.search-box{
+  width: 160px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 8px 43%; 
+  box-sizing: border-box;
+  background-color: #d8bfd8;
+}
+h1{
+  color:#f9906f;
+  text-align: center;
+  font-family: 'Rowdies', cursive;
+}
+h3{
+  font-family: 'Permanent Marker', cursive;
+  margin: 15px 10px;
+}
+p{
+  font-family: 'Ubuntu', sans-serif;
+  margin: 8px 10px;
+}
+
+div.main-page{
+  width: 100%;
+}
+
+div.cards{
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* robotCard YouSeeThisCard YouDontSeeThisCard */
+
+div.robotCard{
+  /* box-sizing: border-box; */
+  border-radius: 20px;
+  width: 300px;
+  height: auto;
+  margin: 5px;
+  background-color: #f6d8b9;
+}
+/* fed8b1 */
+/* ae98aa */
