@@ -1,4 +1,4 @@
-export  const friendsArr = [
+export const friendsArr = [
     {
         id: 1,
         img:'https://robohash.org/1', 

@@ -1,72 +1,60 @@
-import React, {useState} from 'react'
+import React from 'react'
+import {connect} from 'react-redux'
+import {setSearchField, requestRobots} from '../action'
 import Card from '../components/card'
 import SearchBox from '../components/Searchbox'
-import {friendsArr} from '../components/robot'
 import Scroll from '../components/scroll'
 
-function App(){
-    
-//    const {mouseBy, highlightCard} = useState(false)
-    
-    const [robofriends, foundfriends] = useState({
-        robots: friendsArr,
-        searchName: ''
-    })
-   
+const mapStateToProps = state =>{
+    return {
+        searchField: state.searchRobots.searchField,
+        robots: state.requestRobots.robots,
+        isPending: state.requestRobots.isPending
+    }
+}
 
-    // not done !!!!
-    // function cardHighlight(){
-    //     highlightCard(true)
-    // }
-    // not done
-    // function cardNormal(){
-    //     highlightCard(false)
-    // }
-    let filteredRobots
-    function searchFor(event){
-        const search = event.target.value;
-        
-        filteredRobots = friendsArr.filter((rofriend) =>
-            rofriend.name.toLowerCase().includes(search.toLowerCase()));  
-            
-        foundfriends(prevValue =>{
-            return {
-                robots: filteredRobots,
-                searchName:[search]
-            }
-        });
-        }
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onSearchChange: (event) => dispatch(setSearchField(event.target.value)),
+        onRequestRobots: () => requestRobots(dispatch)
+    }
+}
+
+function App(props){
+    
+    const {searchField, onSearchChange, robots} = props;
+
+    
+    const filteredRobots = robots.filter(robot => {
+        return robot.name.toLowerCase().includes(searchField.toLowerCase());
+      })
 
 
     return (
-
         <div className='main-page'>
             <h1> YOUR ROBOFRIENDS</h1>
             <SearchBox 
-                nameLookfor = {robofriends.searchName}
-                searchingFunction = {searchFor}
+                nameLookfor = {searchField}
+                searchingFunction = {onSearchChange}
             />
             <hr></hr>
     
         <Scroll>
         <div className='cards'>
-            {robofriends.robots.map((robofriend, index) =>(
+            {filteredRobots.map((robofriend, index) =>(
                 <Card 
                     key= {index}
                     id = {robofriend.id}
                     name = {robofriend.name}
                     email = {robofriend.email}
                     image = {robofriend.img}
-                    // onMouseOver ={cardHighlight}
-                    // onMouseOut = {cardNormal}
                 />
-            )
-            )}
-            </div>
-            </Scroll>
+            ))}
+        </div>
+        </Scroll>
         </div>
     )
 
 }
 
-export default App;
+export default connect(mapStateToProps, mapDispatchToProps)(App);
