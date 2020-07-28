@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/julikoapp/wb_app/static/css/main.b9b60105.chunk.css",
+    "main.js": "/julikoapp/wb_app/static/js/main.7472f9ef.chunk.js",
+    "main.js.map": "/julikoapp/wb_app/static/js/main.7472f9ef.chunk.js.map",
+    "runtime-main.js": "/julikoapp/wb_app/static/js/runtime-main.2ec66911.js",
+    "runtime-main.js.map": "/julikoapp/wb_app/static/js/runtime-main.2ec66911.js.map",
+    "static/js/2.6150a2c0.chunk.js": "/julikoapp/wb_app/static/js/2.6150a2c0.chunk.js",
+    "static/js/2.6150a2c0.chunk.js.map": "/julikoapp/wb_app/static/js/2.6150a2c0.chunk.js.map",
+    "index.html": "/julikoapp/wb_app/index.html",
+    "precache-manifest.a8f256b4a7c20ed35992acf47a202899.js": "/julikoapp/wb_app/precache-manifest.a8f256b4a7c20ed35992acf47a202899.js",
+    "service-worker.js": "/julikoapp/wb_app/service-worker.js",
+    "static/css/main.b9b60105.chunk.css.map": "/julikoapp/wb_app/static/css/main.b9b60105.chunk.css.map",
+    "static/js/2.6150a2c0.chunk.js.LICENSE.txt": "/julikoapp/wb_app/static/js/2.6150a2c0.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2ec66911.js",
+    "static/js/2.6150a2c0.chunk.js",
+    "static/css/main.b9b60105.chunk.css",
+    "static/js/main.7472f9ef.chunk.js"
+  ]
+}
